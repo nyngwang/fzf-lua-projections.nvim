@@ -28,7 +28,7 @@ M.projects = function(workspaces, opts)
   opts.prompt = 'Projections> '
   opts.actions = {
     ['default'] = function(selected)
-      vim.cmd('cd' .. selected[1])
+      require('projections.switcher').switch(selected[1])
     end
   }
 
