@@ -2,7 +2,10 @@ fzf-lua-projections.nvim
 ==
 
 fzf-lua-projections.nvim will help you restoring any project session in a breeze
-by facilitating my favorite plugin fzf-lua and the new star projections.nvim.
+by facilitating my favorite plugin [`ibhagwan/fzf-lua`](https://github.com/ibhagwan/fzf-lua/)
+and the new star project [`GnikDroy/projections.nvim`]().
+
+btw, this repo was built with the help of projections.nvim and fzf-lua :)
 
 ## Demo.
 
@@ -11,11 +14,12 @@ TBU.
 
 ## Requirements.
 
-1. fzf-lua: no need to add anything for it :)
-2. projections: just a note below.
+1. For `ibhagwan/fzf-lua`: you don't need to add anything for this plugin. :)
+2. For `GnikDroy/projections.nvim`: you just need to read the following note.
    - if you use neovim as the editor for terminal interactive `git` commands,
-     you have to ensure that the guardian check `vim.fn.argc() == 0` is there:
-
+     e.g `git commit` without any argument,
+     you have to ensure that you did add the guardian check `vim.fn.argc() == 0`
+     as indicated in [README.md of `GnikDroy/projections.nvim`](https://github.com/GnikDroy/projections.nvim#recommended-configuration):
       ```lua
       -- auto-restore on start.
       vim.api.nvim_create_autocmd({ 'VimEnter' }, {
