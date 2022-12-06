@@ -9,7 +9,7 @@ btw, this repo was built with the help of projections.nvim and fzf-lua :)
 
 ## Demo.
 
-TBU.
+https://user-images.githubusercontent.com/24765272/205894447-3d6d3726-5085-4e7f-830b-8f99c58a5289.mov
 
 
 ## Requirements.
