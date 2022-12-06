@@ -34,6 +34,11 @@ TBU.
       })
       ```
 
+## Dependencies
+
+- The dependencies of `ibhagwan/fzf-lua`: https://github.com/ibhagwan/fzf-lua#dependencies
+- The dependencies of `GnikDroy/projections.nvim`: (not provided.)
+
 
 ## Compatible with
 
