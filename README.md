@@ -3,7 +3,7 @@ fzf-lua-projections.nvim
 
 fzf-lua-projections.nvim will help you restoring any project session in a breeze
 by facilitating my favorite plugin [`ibhagwan/fzf-lua`](https://github.com/ibhagwan/fzf-lua/)
-and the new star project [`GnikDroy/projections.nvim`]().
+and the new star project [`GnikDroy/projections.nvim`](https://github.com/GnikDroy/projections.nvim).
 
 btw, this repo was built with the help of projections.nvim and fzf-lua :)
 
