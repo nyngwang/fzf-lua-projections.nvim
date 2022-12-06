@@ -14,6 +14,10 @@ https://user-images.githubusercontent.com/24765272/205894447-3d6d3726-5085-4e7f-
 
 ## Requirements.
 
+0. You will need to add this line to your init.lua
+  ```lua
+  vim.opt.ssop:append({ 'localoptions' })
+  ```
 1. For `ibhagwan/fzf-lua`: you don't need to add anything for this plugin. :)
 2. For `GnikDroy/projections.nvim`: you just need to read the following note.
    - if you use neovim as the editor for terminal interactive `git` commands,
