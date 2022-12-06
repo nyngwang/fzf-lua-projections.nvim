@@ -1,16 +1,18 @@
-fzf-lua-projections
+fzf-lua-projections.nvim
 ==
 
-fzf-lua + projections.nvim to help you restoring sessions in a breeze.
+fzf-lua-projections.nvim will help you restoring any project session in a breeze
+by facilitating my favorite plugin fzf-lua and the new star projections.nvim.
 
 ## Demo.
 
 TBU.
 
+
 ## Requirements.
 
 1. fzf-lua: no need to add anything for it :)
-2. projections
+2. projections: just a note below.
    - if you use neovim as the editor for terminal interactive `git` commands,
      you have to ensure that the guardian check `vim.fn.argc() == 0` is there:
 
@@ -28,8 +30,13 @@ TBU.
       })
       ```
 
-## Config. Example.
 
+## Can work with
+
+- [nvim-neo-tree/neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
+
+
+## Config. Example.
 
 ```lua
 use {
@@ -42,8 +49,10 @@ use {
       -- ...
       store_hooks = {
         pre = function ()
+          -- if you use neo-tree.nvim, add these two lines to the `pre` of `store_hooks`.
           vim.cmd('tabd Neotree close')
           vim.cmd('tabn')
+          -- ...
         end,
         -- ...
       },
@@ -52,6 +61,9 @@ use {
     -- ...
   end
 }
+
+-- the only keymap
+vim.keymap.set('n', '<Leader>cp', function () require('fzf-lua-p').projects() end, NOREF_NOERR_TRUNC)
 ```
 
 
