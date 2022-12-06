@@ -35,18 +35,24 @@ TBU.
       ```
 
 
-## Can work with
+## Compatible with
 
 - [nvim-neo-tree/neo-tree.nvim](https://github.com/nvim-neo-tree/neo-tree.nvim)
 
 
 ## Config. Example.
 
+note: Actually, it's `fzf-lua-projections` requires `GnikDroy/projections.nvim`
+
+
 ```lua
 use {
   'GnikDroy/projections.nvim',
   requires = {
-    'nyngwang/fzf-lua-projections.nvim', -- add this line
+    -- add these two lines
+    'ibhagwan/fzf-lua',                  -- Customize the menu UI yourself from fzf-lua's setup.
+    'nyngwang/fzf-lua-projections.nvim', -- actually, it's that fzf-lua-projections requires projections,
+                                         -- I just want to make it compact :)
   },
   config = function ()
     require('projections').setup {
@@ -69,7 +75,4 @@ use {
 -- the only keymap
 vim.keymap.set('n', '<Leader>cp', function () require('fzf-lua-p').projects() end, NOREF_NOERR_TRUNC)
 ```
-
-
-
 
